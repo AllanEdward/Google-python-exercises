@@ -12,10 +12,20 @@
 # all adjacent == elements have been reduced to a single element,
 # so [1, 2, 2, 3] returns [1, 2, 3]. You may create a new list or
 # modify the passed in list.
-def remove_adjacent(nums):
-  # +++your code here+++
-  return
 
+def remove_adjacent(nums):
+    sortlist = []
+    for n in nums:
+        if len(sortlist) > 0:
+            #print "sortlist last value : %d , n value %d" % (sortlist[-1],n)
+            if sortlist[-1] != n:
+                #print "check condition %d : %d" % (sortlist[-1],n)
+                sortlist.append(n)
+                #print sortlist[:]
+                #print "sorted values after append %d" % (sortlist[-1])
+        else:
+            sortlist.append(n)
+    return sortlist
 
 # E. Given two lists sorted in increasing order, create and return a merged
 # list of all the elements in sorted order. You may modify the passed in lists.
