@@ -25,6 +25,7 @@ def match_ends(words):
     for word in words:
         if (len(word) >= 2 and (word[0] == word[-1])):
             counter = counter + 1
+            print "match_ends"
     return counter
 
 
