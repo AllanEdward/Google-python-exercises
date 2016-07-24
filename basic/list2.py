@@ -21,7 +21,7 @@ def remove_adjacent(nums):
             if sortlist[-1] != n:
                 #print "check condition %d : %d" % (sortlist[-1],n)
                 sortlist.append(n)
-                #print sortlist[:]
+                print sortlist[:]
                 #print "sorted values after append %d" % (sortlist[-1])
         else:
             sortlist.append(n)
